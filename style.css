@@ -419,6 +419,55 @@ a:focus-visible {
   border-color: var(--madu);
 }
 
+.pilih-layanan {
+  border: none;
+}
+
+.pilih-layanan legend {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.daftar-centang {
+  max-height: 290px;
+  overflow-y: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-order .centang {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e0de;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.form-order .centang:last-child {
+  border-bottom: none;
+}
+
+.form-order .centang:hover {
+  background: var(--krem);
+}
+
+.centang input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--madu);
+  flex-shrink: 0;
+}
+
+.centang span {
+  flex: 1;
+}
+
+.centang b {
+  white-space: nowrap;
+}
+
 .harga-pilih {
   padding: 12px 16px;
   background: var(--krem);
