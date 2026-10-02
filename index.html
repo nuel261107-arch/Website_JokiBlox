@@ -151,9 +151,10 @@
           </select>
         </label>
 
-        <label id="boxLayanan">Layanan
-          <select id="jenisLayanan"></select>
-        </label>
+        <fieldset class="pilih-layanan" id="boxLayanan">
+          <legend>Layanan (boleh pilih lebih dari satu)</legend>
+          <div class="daftar-centang" id="daftarLayanan"></div>
+        </fieldset>
 
         <label id="boxGameLain" hidden>Nama game
           <input type="text" id="gameLain" placeholder="Contoh: Adopt Me">
@@ -163,7 +164,7 @@
           <textarea id="catatan" rows="3" placeholder="Contoh: target level, jumlah, atau permintaan lain"></textarea>
         </label>
 
-        <p class="harga-pilih" id="hargaPilih">Harga: -</p>
+        <p class="harga-pilih" id="hargaPilih">Estimasi harga: -</p>
 
         <button type="submit" class="tombol tombol-wa">Kirim ke WhatsApp</button>
       </form>
