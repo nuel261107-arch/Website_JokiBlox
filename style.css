@@ -1,0 +1,676 @@
+/* ===== Warna & dasar ===== */
+:root {
+  --navy: #121212;      /* hitam */
+  --madu: #e3151c;      /* merah logo */
+  --laut: #b30f15;      /* merah tua */
+  --muda: #ff5a5f;      /* merah terang untuk teks di latar hitam */
+  --krem: #faf6f4;
+  --abu: #f0ecea;
+  --teks: #1b1b1b;
+  --hijau-wa: #1faa59;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  color: var(--teks);
+  background: var(--krem);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Lilita One", "Arial Black", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--muda);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  color: white;
+}
+
+.nav-isi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 0 var(--madu);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-weight: 700;
+}
+
+.menu a:hover {
+  color: var(--muda);
+}
+
+.tombol-kecil {
+  background: var(--madu);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+.menu .tombol-kecil:hover {
+  color: var(--navy);
+  background: white;
+}
+
+.tombol-menu {
+  display: none;
+  background: var(--madu);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ===== Tombol ===== */
+.tombol {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  border: 2px solid transparent;
+}
+
+.tombol-wa {
+  background: var(--hijau-wa);
+  color: white;
+}
+
+.tombol-wa:hover {
+  background: #168c48;
+}
+
+.tombol-garis {
+  border-color: white;
+  color: white;
+}
+
+.tombol-garis:hover {
+  background: white;
+  color: var(--navy);
+}
+
+.tombol-gelap {
+  background: var(--navy);
+  color: white;
+}
+
+.tombol-gelap:hover {
+  background: #000;
+}
+
+.tombol-terang {
+  background: var(--madu);
+  color: white;
+}
+
+.tombol-terang:hover {
+  background: white;
+  color: var(--navy);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--navy);
+  color: white;
+  padding: 70px 0 80px;
+}
+
+.hero-isi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-teks {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 460px;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  color: #dcdcdc;
+}
+
+.hero-tombol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* dua hexagon di kanan hero */
+.hero-visual {
+  position: relative;
+  width: 360px;
+  height: 340px;
+  flex-shrink: 0;
+}
+
+.hex {
+  position: absolute;
+  width: 210px;
+  height: 240px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hex-emoji {
+  font-size: 3.4rem;
+  line-height: 1;
+}
+
+.hex-nama {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.2rem;
+}
+
+.hex-bee {
+  top: 0;
+  left: 0;
+  background: var(--madu);
+  color: white;
+}
+
+.hex-blox {
+  bottom: 0;
+  right: 0;
+  background: white;
+  color: var(--navy);
+}
+
+/* ===== Statistik ===== */
+.statistik {
+  background: var(--madu);
+  color: white;
+  padding: 22px 0;
+}
+
+.statistik-isi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.statistik strong {
+  display: block;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.statistik span {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* ===== Bagian umum ===== */
+.bagian {
+  padding: 70px 0;
+}
+
+.bagian-abu {
+  background: var(--abu);
+}
+
+.bagian h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.sub {
+  max-width: 560px;
+  margin-bottom: 32px;
+  color: #555;
+}
+
+.catatan {
+  margin-top: 22px;
+  font-size: 0.92rem;
+  color: #666;
+}
+
+/* ===== Layanan ===== */
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.game {
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.game h3 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.game > p {
+  margin-bottom: 18px;
+}
+
+.game-bee {
+  background: var(--madu);
+  color: white;
+}
+
+.game-blox {
+  background: var(--navy);
+  color: white;
+}
+
+.harga {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.harga li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed currentColor;
+}
+
+.harga b {
+  white-space: nowrap;
+}
+
+.harga li.grup {
+  margin-top: 8px;
+  border-top: 2px solid currentColor;
+  padding-top: 14px;
+}
+
+/* ===== Request game lain ===== */
+.request {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 26px 30px;
+  background: white;
+  border-radius: 16px;
+  border: 3px dashed var(--laut);
+}
+
+.request h3 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.request p {
+  max-width: 600px;
+  color: #555;
+}
+
+.request .tombol {
+  flex-shrink: 0;
+}
+
+/* ===== Form order ===== */
+.form-order {
+  max-width: 560px;
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-order label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 800;
+}
+
+.form-order input,
+.form-order select,
+.form-order textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  color: var(--teks);
+}
+
+.form-order input:focus,
+.form-order select:focus,
+.form-order textarea:focus {
+  outline: none;
+  border-color: var(--madu);
+}
+
+.harga-pilih {
+  padding: 12px 16px;
+  background: var(--krem);
+  border-left: 5px solid var(--madu);
+  font-weight: 800;
+}
+
+.form-order .tombol {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ===== Cara order ===== */
+.langkah {
+  list-style: none;
+  counter-reset: urut;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.langkah li {
+  counter-increment: urut;
+  background: white;
+  padding: 20px 16px;
+  border-radius: 12px;
+  border-top: 5px solid var(--laut);
+}
+
+.langkah li::before {
+  content: counter(urut);
+  display: block;
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+  color: var(--laut);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.langkah h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.langkah p {
+  font-size: 0.93rem;
+  color: #555;
+}
+
+/* ===== Alasan ===== */
+.alasan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.alasan {
+  padding-left: 16px;
+  border-left: 5px solid var(--madu);
+}
+
+.alasan h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.alasan p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== Kontak ===== */
+.kontak {
+  background: var(--navy);
+  color: white;
+}
+
+.kontak .sub {
+  color: #dcdcdc;
+}
+
+.kontak-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.kontak-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px;
+  border: 2px solid #3a3a3a;
+  border-radius: 12px;
+}
+
+.kontak-item b {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--muda);
+}
+
+.kontak-item span {
+  color: #dcdcdc;
+}
+
+a.kontak-item:hover {
+  border-color: var(--madu);
+  background: #222;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #0a0a0a;
+  color: #b5b5b5;
+  padding: 30px 0;
+  font-size: 0.92rem;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+.footer strong {
+  color: white;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  max-width: 760px;
+}
+
+/* ===== Tombol WA mengambang ===== */
+.wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  background: var(--hijau-wa);
+  color: white;
+  font-weight: 800;
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.wa-float:hover {
+  background: #168c48;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 900px) {
+  .langkah {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .alasan-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kontak-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .tombol-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--navy);
+    border-top: 1px solid #3a3a3a;
+    padding: 8px 20px 16px;
+  }
+
+  .menu.buka {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 12px 0;
+  }
+
+  .menu .tombol-kecil {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .form-order {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-isi {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 340px;
+    height: 300px;
+  }
+
+  .hex {
+    width: 180px;
+    height: 206px;
+  }
+
+  .statistik-isi {
+    grid-template-columns: 1fr;
+  }
+
+  .request {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .game-grid,
+  .kontak-grid,
+  .langkah,
+  .alasan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game {
+    padding: 22px;
+  }
+
+  .bagian {
+    padding: 50px 0;
+  }
+}
